@@ -47,6 +47,8 @@ class UserController
 
         Auth::guard($guard)->login($user);
 
+        Session::save();
+
         return response(status: 204);
     }
 
